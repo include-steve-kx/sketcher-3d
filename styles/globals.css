@@ -1,16 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div {
+  /* @apply border-2 border-rose-600 p-1; */
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply bg-transparent font-mono;
+  --tw-text-opacity: 1;
+  color: rgb(12 12 12 / var(--tw-text-opacity));
+
+  --color-button-length: 40px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+  margin: 2%;
+  padding: 2%;
+  border-width: 2px;
+  border-color: rgb(12 12 12);
 }
 
-* {
-  box-sizing: border-box;
+.add-functions button:focus, .control-functions button:focus, .thickness-options button:focus {
+  background-color: rgb(12, 12, 12);
+  color: rgb(238, 238, 238);
+}
+
+.button-black {
+  min-width: var(--color-button-length);
+  min-height: var(--color-button-length);
+  background-color: rgb(0, 0, 0);
+}
+.button-red {
+  min-width: var(--color-button-length);
+  min-height: var(--color-button-length);
+  background-color: rgb(255, 0, 0);
+}
+.button-green {
+  min-width: var(--color-button-length);
+  min-height: var(--color-button-length);
+  background-color: rgb(0, 255, 0);
+}
+.button-blue {
+  min-width: var(--color-button-length);
+  min-height: var(--color-button-length);
+  background-color: rgb(0, 0, 255);
+}
+
+.main-canvas {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.add-functions {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2%;
+  min-width: 20%;
+  min-height: 20%;
+
+  display: block;
+}
+
+.control-functions {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2%;
+  min-width: 20%;
+  min-height: 20%;
+
+  display: block;
+}
+
+.drawing-options {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2%;
+  min-width: 40%;
+  min-height: 20%;
+
+  display: block;
 }
